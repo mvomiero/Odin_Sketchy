@@ -1,0 +1,78 @@
+<head>
+    <!-- Set the character encoding to UTF-8 for proper text rendering -->
+    <meta charset="UTF-8" />
+    
+    <!-- Define how the webpage should scale on different devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- The title that appears in the browser tab -->
+    <title>Etch-a-sketch</title>
+    
+    <!-- Preconnect to Google Fonts to optimize font loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Link to Google Fonts stylesheet to load the "Roboto" font styles -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- Link to the favicon icon that appears in the browser tab
+        // rel is used to specify the relationship to the connected link -->
+    <link rel="shortcut icon" href="pencil.ico" />
+    
+    <!-- Link to an external stylesheet for styling the webpage -->
+    <link rel="stylesheet" href="style.css" />
+    
+    <!-- Link to Font Awesome icons library for using icons in the page -->
+    <script
+      src="https://kit.fontawesome.com/4c536a6bd5.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <h1 class="title">Etch-a-sketch</h1>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="main">
+      <!-- Settings -->
+      <div class="settings">
+        <!-- Input for choosing drawing color -->
+        <input id="colorPicker" type="color" value="#333333" />
+        <!-- Buttons for various modes and actions -->
+        <button id="colorBtn">Color mode</button>
+        <button id="rainbowBtn">Rainbow mode</button>
+        <button id="eraserBtn">Eraser</button>
+        <button id="clearBtn">Clear</button>
+        <!-- Display for grid size -->
+        <div id="sizeValue" class="size-value">16 x 16</div>
+        <!-- Slider for adjusting grid size -->
+        <input id="sizeSlider" type="range" value="16" min="1" max="64" />
+      </div>
+      <!-- Drawing Grid -->
+      <div id="grid" class="grid"></div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+      <p>
+        Copyright ©
+        <script>
+          document.write(new Date().getFullYear())
+        </script>
+        michalosman
+      </p>
+      <a href="https://github.com/michalosman" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </footer>
+    
+    <!-- JavaScript file for scripting -->
+    <script src="script.js"></script>
+  </body>
+  
